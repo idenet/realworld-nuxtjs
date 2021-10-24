@@ -152,7 +152,7 @@
                 :to="{
                   name: 'home',
                   query: {
-                    tab: 'global_feed',
+                    tab: 'tag',
                     tag: item
                   }
                 }"
@@ -187,7 +187,7 @@ export default {
     const tab = query.tab || 'global_feed'
     const tag = query.tag
 
-    const loadArticles = tab === 'global_feed'
+    const loadArticles = tab !== 'your_feed'
       ? getArticles
       : getYourFeedArticles
 
